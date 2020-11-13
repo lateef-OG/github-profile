@@ -166,35 +166,17 @@
         margin-top: 16px;
         order: 4;
     }
-    /* .header > .search-nav {
-        display: flex;
-        align-items: center;
-    } */
     .header > .search-nav > .search {
-        /* position: relative; */
         width: 100%;
-        /* margin: 8px 0; */
     }
     .header > .search-nav > .search > .slash-icon{
-        /* position: absolute; */
         right: 10px;
-        /* top: 50%; */
-        /* margin-top: -10px; */
-        /* z-index: 1; */
     }
-    .header > .search-nav > .search > input{
-        /* position: relative;
-        height: 30px; */
-        width: 100%;
-        /* padding: 0 12px;
-        border: 1px solid #444d56;
-        border-radius: 6px;
-        font-weight: 400;
-        font-size: 14px;
-        background: transparent;
-        outline: none;
-        transition: 0.2s ease-in-out; */
+    .header > .search-nav > .search {
         margin-right: 0;
+    }
+    .header > .search-nav > .search > input {
+        width: 100%;
     }
     .header > .search-nav > .search > input:focus {
         border-color: none;
