@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/header.css">
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <span class="iconify mobile-hamburger" data-icon="octicon:three-bars-16" data-inline="false" onclick="toggleMobileNav()"></span>
+        <div class="logo">
+            <i class="fab fa-github github-icon"></i>
+        </div>
+        <div class="search-nav"  id="search-nav">
+            <div class="search">
+                <img src="https://github.githubassets.com/images/search-key-slash.svg" alt="" class="slash-icon">
+                <input type="text" placeholder="Search or jump to..."/>
+            </div>
+            <div class="nav">
+                <div class="nav-item mobile-only">Dashboard</div>
+                <div class="nav-item">Pull<span class="no-tablet"> request</span>s</div>
+                <div class="nav-item">Issues</div>
+                <div class="nav-item">Marketplace</div>
+                <div class="nav-item">Explore</div>
+                <div class="nav-item mobile-only profile-link">
+                    <div class="avatar">
+                        <img src="" alt="">
+                    </div>
+                    Lateef-OG
+                </div>
+                <div class="nav-item mobile-only sign-out">
+                    <span class="iconify" data-icon="octicon:sign-out-16" data-inline="false"></span>
+                    Sign out
+                </div>
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="item notification">
+                <span class="iconify bell" data-icon="octicon:bell-16" data-inline="false" ></span>
+                <span class="unread"></span>
+            </div>
+            <div class="item more">
+                <span class="iconify plus" data-icon="octicon:plus-16" data-inline="false"></span>
+                <span class="dropdown-caret"></span>
+            </div>
+            <div class="item profile">
+                <div class="avatar">
+                    <img src="" alt="">
+                </div>
+                <span class="dropdown-caret"></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="content">
+        <!-- <section class="tab-section">
+            <div>
+
+            </div>
+            <div class="tabs">
+
+            </div>
+        </section> -->
+        <section class="left">
+            <div class="section-top"></div>
+        </section>
+        <section class="right">
+            <div class="section-top tabs">
+                <div class="tab">
+                    <span class="iconify" data-icon="octicon:book-16" data-inline="false"></span>
+                    Overview
+                </div>
+                <div class="tab selected">
+                    <span class="iconify" data-icon="octicon:repo-16" data-inline="false"></span>
+                    Repositories
+                    <div class="count">37</div>
+                </div>
+                <div class="tab">
+                    <span class="iconify" data-icon="octicon:project-16" data-inline="false"></span>
+                    Projects
+                </div>
+                <div class="tab">
+                    <span class="iconify" data-icon="octicon:package-16" data-inline="false"></span>
+                    Packages
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/app.js"></script>
+</body>
+</html>

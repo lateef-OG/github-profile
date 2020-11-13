@@ -1,0 +1,258 @@
+/* Header styles */
+.header{
+    display: flex;
+    align-items: center;
+    height: 62px;
+    padding: 0 32px;
+    background: #24292E;
+}
+.header > .mobile-hamburger{
+    display: none;
+}
+.header > .logo {
+    margin-right: 16px;
+}
+.header > .logo > .github-icon{
+    color: #ffffff;
+    font-size: 32px;
+}
+.header > .search-nav {
+    display: flex;
+    align-items: center;
+}
+.header > .search-nav > .search {
+    position: relative;
+}
+.header > .search-nav > .search > .slash-icon{
+    position: absolute;
+    right: 26px;
+    top: 50%;
+    margin-top: -10px;
+    z-index: 1;
+}
+.header > .search-nav > .search > input{
+    position: relative;
+    height: 30px;
+    width: 270px;
+    padding: 0 12px;
+    border: 1px solid #444d56;
+    border-radius: 6px;
+    font-weight: 400;
+    font-size: 14px;
+    background: transparent;
+    outline: none;
+    transition: 0.2s ease-in-out;
+    margin-right: 16px;
+}
+.header > .search-nav > .search > input:focus {
+    border-color: #0366d6;
+    background-color: #ffffff;
+    width: 440px;
+    z-index: 2;
+}
+.header > .search-nav > .nav {
+    display: flex;
+}
+.header > .search-nav > .nav > .nav-item {
+    margin-right: 16px;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
+}
+.header > .search-nav > .nav > .nav-item.mobile-only{
+    display: none;
+}
+.header > .header-right {
+    margin-left: auto;
+    display: flex;
+}
+.header > .header-right > .item {
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+}
+.header > .header-right > .item:last-child {
+    margin-right: 0;
+}
+.header > .header-right > .notification {
+    position: relative;
+}
+.header > .header-right > .notification > .unread {
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background: #006eed;
+    border: 2px solid #24292E;
+    top: -6px;
+    left: 6px;
+}
+.header > .header-right > .notification > .bell {
+    height: 16px;
+    color: #ffffff;
+}
+.header > .header-right .dropdown-caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    content: "";
+    border-top-style: solid;
+    border-top-width: 4px;
+    border-right: 4px solid transparent;
+    border-bottom: 0 solid transparent;
+    border-left: 4px solid transparent;
+    color: #ffffff;
+    margin-left: 4px;
+}
+.header > .header-right > .more > .plus {
+    height: 16px;
+    width: 16px;
+    color: #ffffff;
+}
+.header > .header-right > .profile > .avatar {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #444d56;
+}
+.header > .header-right > .profile > .avatar > img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background: #444d56;
+}
+
+@media only screen and (min-width: 530px) and (max-width: 949px) {
+    .header{
+        padding: 0 24px;
+    }
+    .header > .search-nav > .search > input:focus {
+        border-color: #0366d6;
+        background-color: #ffffff;
+        width: 250px;
+        z-index: 2;
+    }
+    .header > .search-nav > .nav > .nav-item .no-tablet{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 529px){
+    .header{
+        padding: 16px;
+        height: auto;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .header > .mobile-hamburger{
+        display: initial;
+        height: 24px;
+        width: 24px;
+        color: #ffffff;
+        order: 1;
+    }
+    .header > .logo {
+        order: 2;
+    }
+    .header > .search-nav{
+        display: none;
+    }
+    .header > .search-nav.show-menu{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 16px;
+        order: 4;
+    }
+    /* .header > .search-nav {
+        display: flex;
+        align-items: center;
+    } */
+    .header > .search-nav > .search {
+        /* position: relative; */
+        width: 100%;
+        /* margin: 8px 0; */
+    }
+    .header > .search-nav > .search > .slash-icon{
+        /* position: absolute; */
+        right: 10px;
+        /* top: 50%; */
+        /* margin-top: -10px; */
+        /* z-index: 1; */
+    }
+    .header > .search-nav > .search > input{
+        /* position: relative;
+        height: 30px; */
+        width: 100%;
+        /* padding: 0 12px;
+        border: 1px solid #444d56;
+        border-radius: 6px;
+        font-weight: 400;
+        font-size: 14px;
+        background: transparent;
+        outline: none;
+        transition: 0.2s ease-in-out; */
+        margin-right: 0;
+    }
+    .header > .search-nav > .search > input:focus {
+        border-color: none;
+        background-color: #ffffff;
+        width: 100%;
+        z-index: 2;
+    }
+    .header > .search-nav > .nav {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top: 16px;
+    }
+    .header > .search-nav > .nav > .nav-item {
+        font-size: 14px;
+        font-weight: 600;
+        color: #ffffff;
+        cursor: pointer;
+        width: 100%;
+        padding: 8px 0;
+        border-top: 1px solid hsla(0,0%,100%,0.15);
+        margin-right: 0;
+    }
+    .header > .search-nav > .nav > .nav-item.mobile-only{
+        display: initial;
+    }
+    .header > .search-nav > .nav > .nav-item.profile-link{
+        display: flex;
+        align-items: center;
+    }
+    .header > .search-nav > .nav > .nav-item.profile-link > .avatar {
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        background: #444d56;
+        margin-right: 5px;
+    }
+    .header > .search-nav > .nav > .nav-item.profile-link > .avatar > img {
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        background: #444d56;
+    }
+    .header > .search-nav > .nav > .nav-item.sign-out{
+        display: flex;
+        align-items: center;
+    }
+    .header > .search-nav > .nav > .nav-item.sign-out > svg{
+        margin-right: 5px;
+    }
+    .header > .header-right {
+        margin-left: initial;
+        order: 3;
+    }
+    .header > .header-right > .item {
+        margin-right: 0;
+    }
+    .header > .header-right > .item:not(:first-child) {
+        display: none;
+    }
+}
