@@ -60,12 +60,12 @@ html, body{
     min-width: 75%;
     height: 48px;
 }
-.content > .tabs-container .tabs{
+.tabs{
     height: 48px;
     padding: 0 16px;
     display: flex;
 }
-.content > .tabs-container .tabs > .tab{
+.tabs > .tab{
     padding: 8px 16px;
     display: flex;
     align-items: center;
@@ -75,11 +75,11 @@ html, body{
     cursor: pointer;
     transition: border-bottom-color .36s ease-in;
 }
-.content > .tabs-container .tabs > .tab > svg{
+.tabs > .tab > svg{
     color: #959DA5;
     margin-right: 8px;
 }
-.content > .tabs-container .tabs > .tab > .count{
+.tabs > .tab > .count{
     margin-left: 8px;
     display: inline-block;
     min-width: 20px;
@@ -93,12 +93,23 @@ html, body{
     border: 1px solid transparent;
     border-radius: 2em;
 }
-.content > .tabs-container .tabs > .tab.selected{
+.tabs > .tab.selected{
     font-weight: 600;
     border-bottom-color: #f9826c;
 }
-.content > .tabs-container .tabs > .tab:hover{
+.tabs > .tab:hover{
     border-bottom-color: #d1d5da;
+}
+.mobile-tabs{
+    border-bottom: 1px solid #E1E4E8;
+    z-index: 3;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background: #FFFFFF;
+    overflow-x: scroll;
+    display: none;
+    width: 100%;
 }
 .content > .main-container .profile-summary{
     width: 25%;
@@ -164,13 +175,87 @@ html, body{
     margin-left: 4px;
     white-space: nowrap;
 }
-
-
-
-.content > .main-container .repo-list{
+.content > .main-container .repo-content{
     width: 75%;
+}
+.content > .main-container .repo-content > .repo-list{
     padding: 0 16px;
-    height: 150vh;
+}
+.content > .main-container .repo-content > .repo-list > .item-container{
+    padding: 16px 0;
+    border-bottom: 1px solid #E1E4E8;
+}
+.content > .main-container .repo-content > .repo-list > .search-container > input{
+    height: 32px;
+    width: 100%;
+    padding: 0 12px;
+    background: #FFFFFF;
+    border: 1px solid #E1E4E8;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: 0;
+}
+.content > .main-container .repo-content > .repo-list > .search-container > input:focus{
+    border-color: #0366d6;
+}
+.content > .main-container .repo-content > .repo-list > .repo-count{
+    display: inline-block;
+}
+.content > .main-container .repo-content > .repo-list > .repo-item{
+    padding: 24px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.content > .main-container .repo-content > .repo-list .repo-name a{
+    font-size: 20px;
+    color: #0366d6;
+    text-decoration: none;
+    line-height: 2;
+}
+.content > .main-container .repo-content > .repo-list .info{
+    display: flex;
+    font-size: 12px;
+    color: #586069;
+}
+.content > .main-container .repo-content > .repo-list .info-item{
+    margin-right: 16px;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+}
+.content > .main-container .repo-content > .repo-list .info-item .color{
+    margin-right: 5px;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background: #F1E05A;
+}
+.content > .main-container .repo-content > .repo-list .info-item svg{
+    margin-right: 5px;
+    height: 16px;
+    width: 16px;
+    color: #586069;
+}
+.content > .main-container .repo-content > .repo-list .star-btn{
+    height: 28px;
+    padding: 3px 12px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #24292E;
+    line-height: 20px;
+    background: #FAFBFC;
+    border: 1px solid rgba(27, 31, 35, 0.15);
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.content > .main-container .repo-content > .repo-list .star-btn svg{
+    height: 16px;
+    width: 16px;
+    margin-right: 4px;
+    color: #6A737D;
 }
 /* .content > .main-container > .profile-repo{
     height: 48px;
@@ -260,6 +345,9 @@ html, body{
     .content > .right > .section-top.tabs{
         padding-right: 24px;
     } */
+    .content > .main-container .repo-content > .repo-list > .repo-item{
+        align-items: center;
+    }
 }
 
 @media only screen and (max-width: 529px){
@@ -345,11 +433,18 @@ html, body{
         display: initial;
     }
     
-    
-    
-    .content > .main-container .repo-list{
+    .content > .main-container .repo-content{
         width: 100%;
-        padding: 0 8px;
+        margin-top: 24px;
         height: 150vh;
+    }
+    .mobile-tabs{
+        display: flex;
+    }
+    .content > .main-container .repo-content > .repo-list .info{
+        flex-wrap: wrap;
+    }
+    .content > .main-container .repo-content > .repo-list > .repo-item{
+        align-items: center;
     }
 }
