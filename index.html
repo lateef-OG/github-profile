@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
     <link rel="stylesheet" type="text/css" href="styles/style.css">
     <link rel="stylesheet" type="text/css" href="styles/header.css">
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <title>Document</title>
 </head>
+
 <body>
     <header class="header">
-        <span class="iconify mobile-hamburger" data-icon="octicon:three-bars-16" data-inline="false" onclick="toggleMobileNav()"></span>
+        <span class="iconify mobile-hamburger" data-icon="octicon:three-bars-16" data-inline="false"
+            onclick="toggleMobileNav()"></span>
         <div class="logo">
             <i class="fab fa-github github-icon"></i>
         </div>
-        <div class="search-nav"  id="search-nav">
+        <div class="search-nav" id="search-nav">
             <div class="search">
                 <img src="https://github.githubassets.com/images/search-key-slash.svg" alt="" class="slash-icon">
-                <input type="text" placeholder="Search or jump to..."/>
+                <input type="text" placeholder="Search or jump to..." />
             </div>
             <div class="nav">
                 <div class="nav-item mobile-only">Dashboard</div>
@@ -30,10 +30,9 @@
                 <div class="nav-item">Marketplace</div>
                 <div class="nav-item">Explore</div>
                 <div class="nav-item mobile-only profile-link">
-                    <div class="avatar">
-                        <img src="" alt="">
-                    </div>
-                    Lateef-OG
+                    <img src="" alt="" class="avatar">
+                    <span class="user-name">
+                    </span>
                 </div>
                 <div class="nav-item mobile-only sign-out">
                     <span class="iconify" data-icon="octicon:sign-out-16" data-inline="false"></span>
@@ -43,7 +42,7 @@
         </div>
         <div class="header-right">
             <div class="item notification">
-                <span class="iconify bell" data-icon="octicon:bell-16" data-inline="false" ></span>
+                <span class="iconify bell" data-icon="octicon:bell-16" data-inline="false"></span>
                 <span class="unread"></span>
             </div>
             <div class="item more">
@@ -51,9 +50,7 @@
                 <span class="dropdown-caret"></span>
             </div>
             <div class="item profile">
-                <div class="avatar">
-                    <img src="" alt="">
-                </div>
+                <img src="" alt="" class="avatar">
                 <span class="dropdown-caret"></span>
             </div>
         </div>
@@ -64,10 +61,9 @@
             <section class="flex-row sticky">
                 <div class="left">
                     <div class="avatar-name hide" id="avatar-name">
-                        <div class="avatar">
-                            <img src="" alt="">
-                        </div>
-                        Lateef-OG
+                        <img src="" alt="" class="avatar">
+                        <span class="user-name">
+                        </span>
                     </div>
                 </div>
                 <div class="right tabs">
@@ -78,7 +74,7 @@
                     <div class="tab selected">
                         <span class="iconify" data-icon="octicon:repo-16" data-inline="false"></span>
                         Repositories
-                        <div class="count">37</div>
+                        <div class="count"></div>
                     </div>
                     <div class="tab">
                         <span class="iconify" data-icon="octicon:project-16" data-inline="false"></span>
@@ -91,50 +87,17 @@
                 </div>
             </section>
         </div>
-        <!-- <section class="left">
-            <div class="section-top"></div>
-            <div class="profile-summary">
-                <div class="avatar">
-                    <img src="" alt="">
-                </div>
-            </div>
-        </section>
-        <section class="right">
-            <div class="section-top tabs">
-                <div class="tab">
-                    <span class="iconify" data-icon="octicon:book-16" data-inline="false"></span>
-                    Overview
-                </div>
-                <div class="tab selected">
-                    <span class="iconify" data-icon="octicon:repo-16" data-inline="false"></span>
-                    Repositories
-                    <div class="count">37</div>
-                </div>
-                <div class="tab">
-                    <span class="iconify" data-icon="octicon:project-16" data-inline="false"></span>
-                    Projects
-                </div>
-                <div class="tab">
-                    <span class="iconify" data-icon="octicon:package-16" data-inline="false"></span>
-                    Packages
-                </div>
-            </div>
-        </section> -->
         <section class="main-container">
             <div class="flex-row">
                 <div class="profile-summary">
-                    <div class="avatar" id="profile-avatar">
-                        <img src="" alt="">
-                    </div>
-                    <div class="name">
-                        Lateef-OG
+                    <img src="" alt="" class="avatar" id="profile-avatar">
+                    <div class="user-name">
                     </div>
                     <div class="set-status">
                         <span class="iconify" data-icon="octicon:smiley-16" data-inline="false"></span>
                         <span class="text">Set status</span>
                     </div>
-                    <div class="title">
-                        Frontend Developer
+                    <div class="title" id="bio">
                     </div>
                 </div>
                 <div class="repo-content">
@@ -144,7 +107,7 @@
                         </div>
                         <div class="tab selected">
                             Repositories
-                            <div class="count">37</div>
+                            <div class="count"></div>
                         </div>
                         <div class="tab">
                             Projects
@@ -153,49 +116,20 @@
                             Packages
                         </div>
                     </div>
-                    <div class="repo-list">
+                    <div class="repo-list" id="repo-list">
                         <div class="item-container search-container">
                             <input type="text" placeholder="Find a repository ...">
                         </div>
-                        <div class="item-container repo-count">
+                        <!-- <div class="item-container repo-count" id="repo-count">
                             124 results for public repositories
-                        </div>
-                        <div class="item-container repo-item">
-                            <div class="name-info">
-                                <h3 class="repo-name">
-                                    <a href="#">
-                                        github-profile
-                                    </a>
-                                </h3>
-                                <p class="description"></p>
-                                <div class="info">
-                                    <div class="info-item">
-                                        <div class="color"></div>
-                                        <p class="lang">Javascript</p>
-                                    </div>
-                                    <div class="info-item">
-                                        <span class="iconify" data-icon="octicon:star-16" data-inline="false"></span>
-                                        <p class="lang">22</p>
-                                    </div>
-                                    <div class="info-item">
-                                        <span class="iconify" data-icon="octicon:repo-forked-16" data-inline="false"></span>
-                                        <p class="lang">1</p>
-                                    </div>
-                                    <div class="info-item">
-                                        <p class="lang">updated on 10 Sep</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="star-btn">
-                                <span class="iconify" data-icon="octicon:star-16" data-inline="false"></span>
-                                Star
-                            </button>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
         </section>
     </main>
     <script src="js/app.js"></script>
+    <script src="js/utils.js"></script>
 </body>
+
 </html>

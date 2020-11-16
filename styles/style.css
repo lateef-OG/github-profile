@@ -131,7 +131,7 @@ html, body{
     border-radius: 50%;
     background: #444d56;
 }
-.content > .main-container .profile-summary > .name{
+.content > .main-container .profile-summary > .user-name{
     padding: 16px 0;
     color: #586069;
     font-size: 20px;
@@ -206,11 +206,24 @@ html, body{
     display: flex;
     justify-content: space-between;
 }
-.content > .main-container .repo-content > .repo-list .repo-name a{
+.content > .main-container .repo-content > .repo-list .repo-name{
     font-size: 20px;
     color: #0366d6;
     text-decoration: none;
-    line-height: 2;
+    display: block;
+    margin-bottom: 10px;
+}
+.content > .main-container .repo-content > .repo-list .forked-from{
+    font-size: 12px;
+    color: #586069;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+.content > .main-container .repo-content > .repo-list .description{
+    font-size: 14px;
+    color: #586069;
+    line-height: 1.2;
+    margin-bottom: 10px;
 }
 .content > .main-container .repo-content > .repo-list .info{
     display: flex;
@@ -399,6 +412,7 @@ html, body{
         /* position: relative; */
         height: 16vw;
         width: 16vw;
+        margin-right: 16px;
         /* border-radius: 50%;
         background: #444d56; */
         z-index: 1;
@@ -436,7 +450,6 @@ html, body{
     .content > .main-container .repo-content{
         width: 100%;
         margin-top: 24px;
-        height: 150vh;
     }
     .mobile-tabs{
         display: flex;
